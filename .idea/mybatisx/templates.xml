@@ -64,8 +64,8 @@
             <option name="tableUIInfoList">
               <list>
                 <TableUIInfo>
-                  <option name="className" value="Category" />
-                  <option name="tableName" value="tb_category" />
+                  <option name="className" value="Brand" />
+                  <option name="tableName" value="tb_brand" />
                 </TableUIInfo>
               </list>
             </option>

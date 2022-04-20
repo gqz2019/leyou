@@ -1,10 +1,9 @@
 package com.gqz.item;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * <p>商品启动类</p>
@@ -14,6 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  **/
 @SpringBootApplication
 @EnableDiscoveryClient
+@MapperScan(basePackages = "com.gqz.item.mapper")
 public class ItemApplication {
     public static void main(String[] args) {
         SpringApplication.run(ItemApplication.class, args);

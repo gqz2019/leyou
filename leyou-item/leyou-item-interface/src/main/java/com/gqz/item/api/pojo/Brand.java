@@ -9,43 +9,37 @@ import lombok.Data;
 import java.io.Serializable;
 
 /**
- * 商品类目表，类目和商品(spu)是一对多关系，类目与品牌是多对多关系
+ * 品牌表，一个品牌下有多个商品（spu），一对多关系
  *
  * @author gqz20
- * @TableName tb_category
+ * @TableName tb_brand
  */
-@TableName(value = "tb_category")
+@TableName(value = "tb_brand")
 @Data
-public class Category implements Serializable {
+public class Brand implements Serializable {
     /**
-     * 类目id
+     * 品牌id
      */
     @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
     /**
-     * 类目名称
+     * 品牌名称
      */
     @TableField(value = "name")
     private String name;
 
     /**
-     * 父类目id,顶级类目填0
+     * 品牌图片地址
      */
-    @TableField(value = "parent_id")
-    private Long parent_id;
+    @TableField(value = "image")
+    private String image;
 
     /**
-     * 是否为父节点，0为否，1为是
+     * 品牌的首字母
      */
-    @TableField(value = "is_parent")
-    private Integer is_parent;
-
-    /**
-     * 排序指数，越小越靠前
-     */
-    @TableField(value = "sort")
-    private Integer sort;
+    @TableField(value = "letter")
+    private String letter;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
