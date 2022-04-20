@@ -1,0 +1,33 @@
+server:
+  port: 8000
+spring:
+  application:
+    name: leyou-geteway
+  cloud:
+    gateway:
+      httpclient:
+        compression: true
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "*" #跨域处理 允许所有的域
+            allowedHeaders: "*" # 允许所有的请求头过来
+            allowedMethods: # 支持的方法
+              - GET
+              - POST
+              - PUT
+              - DELETE
+eureka:
+  client:
+    enabled: true
+    registry-fetch-interval-seconds: 30
+    service-url:
+      defaultZone: http://tx.gqz2019.top:8090/eureka/
+  instance:
+    prefer-ip-address: true
+
+logging:
+  level:
+    com.gqz.gateway: debug
+    org.springframework: debug
+    org.springframework.boot.autoconfigure: error

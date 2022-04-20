@@ -1,0 +1,26 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: leyou-item
+  datasource:
+    username: root
+    password: Gqz2475393282!
+    url: jdbc:mysql://tx.gqz2019.top:3306/leyou
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 5
+eureka:
+  client:
+    service-url:
+      defaultZone: http://tx.gqz2019.top:8090/eureka/
+  instance:
+    prefer-ip-address: true
+#    lease-renewal-interval-in-seconds: 5
+#    lease-expiration-duration-in-seconds: 10
+logging:
+  level:
+    com.gqz.item: debug
+    org.springframework: debug
+    org.springframework.boot.autoconfigure: error
