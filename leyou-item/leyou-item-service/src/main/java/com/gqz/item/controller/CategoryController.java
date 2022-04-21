@@ -38,7 +38,7 @@ public class CategoryController {
             // 响应400
             return ResponseEntity.badRequest().build();
         }
-        List<Category> categories = this.categoryService.queryCategoriesByPid(pid);
+        List<Category> categories = categoryService.queryCategoriesByPid(pid);
         if (CollectionUtils.isEmpty(categories)) {
             // 响应404
             return ResponseEntity.notFound().build();

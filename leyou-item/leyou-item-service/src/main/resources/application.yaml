@@ -24,3 +24,7 @@ logging:
     com.gqz.item: debug
     org.springframework: debug
     org.springframework.boot.autoconfigure: error
+mybatis-plus:
+  mapper-locations: classpath*:mapper/**/*.xml
+  configuration:
+    auto-mapping-behavior: full

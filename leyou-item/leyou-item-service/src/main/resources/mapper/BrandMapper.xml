@@ -15,4 +15,8 @@
         id,name,image,
         letter
     </sql>
+    <update id="updateAssociationTable">
+        insert into tb_category_brand(category_id, brand_id)
+        values (#{cid}, #{bid})
+    </update>
 </mapper>
